@@ -1,3 +1,4 @@
+::Updates and Startes Game Server
 @echo off
 
 set STEAMCMD_PATH="%CD%\steamcmd\steamcmd.exe"
