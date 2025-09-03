@@ -6,35 +6,7 @@ set EOS_FLAGS=-ini:Engine:[EpicOnlineServices]:DedicatedServerClientId=xyza78917
 set STEAMCMD_PATH="%BASE_DIR%\steamcmd\steamcmd.exe"
 set APP_ID=1512690
 set INSTALL_DIR="%BASE_DIR%\renown"
-set GAMEINI= (
-echo [/Game/Core/Blueprints/Renown_GameInstance.Renown_GameInstance_C]
-echo ServerName=My Server
-echo MaxPlayers=40
-echo ServerPassword=
-echo AdminPassword=
-echo MapRotation=RSurv-AlgaraIsle_p
-echo PrivateSession=False
-echo GameSaveName=Save 1
-echo MaxPing=180
-echo EnableRCON=True
-echo RCONPort=25575
-echo RCONChatMessagesLimit=30
-echo RCONPassword=
-echo MOTD=Your Message of the Day goes here
-echo ""
-echo [/Script/Engine.GameSession]
-echo MaxPlayers=40
-echo ""
-echo [/Game/Core/Blueprints/GameModes/Renown_Survival_GameMode.Renown_Survival_GameMode_C]
-echo ResourceGainMultiplier=1
-echo GoldCoinGainMultiplier=1
-echo GlobalCraftingMultiplier=1
-echo GlobalSmeltingMultiplier=1
-)
-set ENGINEINI= (
-echo [/Script/SteamSockets.SteamSocketsNetDriver]
-echo NetServerMaxTickRate=30
-)
+
 
 echo Downloading steamcmd...
 curl -o steamcmd.zip %STEAMCMD_DOWNLOAD_URL%
@@ -74,8 +46,10 @@ if not exist "%SERVER_EXEC_PATH%" (
 )
 
 if exist %BASE_DIR%\renown\Renown_Combat\Saved\Config\WindowsServer (
-    echo %GAMEINI% > "%BASE_DIR%\renown\Renown_Combat\Saved\Config\WindowsServer\Game.ini"
-    echo %ENGINEINI% > "%BASE_DIR%\renown\Renown_Combat\Saved\Config\WindowsServer\Engine.ini"
+    curl -L -o %BASE_DIR%\renown\Renown_Combat\Saved\Config\WindowsServer\Game.ini https://raw.githubusercontent.com/Phanzor/RenownServerScripts/refs/heads/main/Dependencies/Game.ini
+    curl -L -o %BASE_DIR%\renown\Renown_Combat\Saved\Config\WindowsServer\Engine.ini https://raw.githubusercontent.com/Phanzor/RenownServerScripts/refs/heads/main/Dependencies/Engine.ini
 )
+
+curl -o %BASE_DIR%\Start-Server.bat https://raw.githubusercontent.com/Phanzor/RenownServerScripts/refs/heads/main/Windows/Start-Server.bat
 
 start "" "%SERVER_EXEC_PATH%" -log %EOS_FLAGS% %USER_DEF_ARGS%
