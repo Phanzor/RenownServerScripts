@@ -1,3 +1,4 @@
+::This script is intended to install SteamCMD, Renown, a base config of ini's, and download the start/update script
 @echo off
 set BASE_DIR=%CD%
 set STEAMCMD_DOWNLOAD_URL=https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip
