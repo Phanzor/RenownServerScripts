@@ -5,7 +5,7 @@ set STEAMCMD_PATH="%CD%\steamcmd\steamcmd.exe"
 set APP_ID=1512690
 set INSTALL_DIR="%CD%\renown"
 set SERVER_EXEC_PATH="%CD%\renown\Renown_CombatServer.exe"
-set EOS_FLAGS=-ini:Engine:[EpicOnlineServices]:DedicatedServerClientId=xyza78917DzEE5Ey0isciVt66QDm5IzM -ini:Engine:[EpicOnlineServices]:DedicatedServerClientSecret=m/mrnywFCdeA1mW3ZSvv3qcVlQlfwi1a+7Z63Q44E
+set EOS_FLAGS=-ini:Engine:[EpicOnlineServices]:DedicatedServerClientId=xyza78917DzEE5Ey0isciVt66QDm5IzM -ini:Engine:[EpicOnlineServices]:DedicatedServerClientSecret=m/mrnywFCdeA1mW3ZSvv3qcVlQlfwi1a+7Z63Q44EGU
 ::You can set additional arguments with the "ADD_ARGS" var in the following format: -ARG1 -ARG2 -ARG3
 set ADD_ARGS=
 ::If you want to run the beta branch set "BETA_BRANCH" equal to "beta"

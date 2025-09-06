@@ -2,7 +2,7 @@
 ::You can set additional arguments with the "ADD_ARGS" var in the following format: -ARG1 -ARG2 -ARG3
 set ADD_ARGS=
 set SERVER_EXEC_PATH="%CD%\renown\Renown_CombatServer.exe"
-set EOS_FLAGS=-ini:Engine:[EpicOnlineServices]:DedicatedServerClientId=xyza78917DzEE5Ey0isciVt66QDm5IzM -ini:Engine:[EpicOnlineServices]:DedicatedServerClientSecret=m/mrnywFCdeA1mW3ZSvv3qcVlQlfwi1a+7Z63Q44E
+set EOS_FLAGS=-ini:Engine:[EpicOnlineServices]:DedicatedServerClientId=xyza78917DzEE5Ey0isciVt66QDm5IzM -ini:Engine:[EpicOnlineServices]:DedicatedServerClientSecret=m/mrnywFCdeA1mW3ZSvv3qcVlQlfwi1a+7Z63Q44EGU
 
 if defined ADD_ARGS (
     set USER_DEF_ARGS=%ADD_ARGS%

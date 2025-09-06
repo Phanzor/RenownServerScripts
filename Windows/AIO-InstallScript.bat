@@ -3,7 +3,7 @@
 set BASE_DIR=%CD%
 set STEAMCMD_DOWNLOAD_URL=https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip
 set SERVER_EXEC_PATH="%BASE_DIR%\renown\Renown_CombatServer.exe"
-set EOS_FLAGS=-ini:Engine:[EpicOnlineServices]:DedicatedServerClientId=xyza78917DzEE5Ey0isciVt66QDm5IzM -ini:Engine:[EpicOnlineServices]:DedicatedServerClientSecret=m/mrnywFCdeA1mW3ZSvv3qcVlQlfwi1a+7Z63Q44E
+set EOS_FLAGS=-ini:Engine:[EpicOnlineServices]:DedicatedServerClientId=xyza78917DzEE5Ey0isciVt66QDm5IzM -ini:Engine:[EpicOnlineServices]:DedicatedServerClientSecret=m/mrnywFCdeA1mW3ZSvv3qcVlQlfwi1a+7Z63Q44EGU
 set STEAMCMD_PATH="%BASE_DIR%\steamcmd\steamcmd.exe"
 set APP_ID=1512690
 set INSTALL_DIR="%BASE_DIR%\renown"
